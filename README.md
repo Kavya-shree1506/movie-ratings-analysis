@@ -1,110 +1,41 @@
-# 🎬 Movie Ratings Analysis
+import pandas as pd
 
-A beginner-to-intermediate **Python project** analyzing movie ratings using **Pandas**.  
-The goal is to extract insights such as **top-rated movies**, **genre-wise rating trends**, and **movie release patterns** over the years.  
+# 1️⃣ Load the dataset
+df = pd.read_csv("data/movies.csv")
 
-This project is perfect for practicing **data analysis workflows**, **Python scripting**, and **CSV handling**.
+# 2️⃣ Basic info
+print("🔹 Dataset Info:")
+print(df.info())
 
----
+print("\n🔹 First 5 Rows:")
+print(df.head())
 
-## 📂 Project Structure
+# 3️⃣ Handle missing values
+df.dropna(inplace=True)
 
-movie-ratings-analysis/
-├── data/
-│ └── movies.csv # Dataset of movies
-├── analysis.py # Python script
-├── genre_wise_average_rating.csv # Output CSV (optional)
-├── top_rated_movies.csv # Output CSV (optional)
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+# 4️⃣ Overall average rating
+avg_rating = df["rating"].mean()
+print(f"\n⭐ Average Movie Rating: {avg_rating:.2f}")
 
+# 5️⃣ Top 5 highest-rated movies
+top_movies = df.sort_values(by="rating", ascending=False).head(5)
+print("\n🏆 Top 5 Highest Rated Movies:")
+print(top_movies[["title", "rating"]])  # Fixed column name
 
----
+# 6️⃣ Genre-wise average rating
+genre_avg = df.groupby("genre")["rating"].mean().sort_values(ascending=False)
+print("\n🎭 Average Rating by Genre:")
+print(genre_avg)
 
-## 🛠 Tools & Libraries
+# 7️⃣ Movies released per year
+movies_per_year = df["year"].value_counts().sort_index()
+print("\n📅 Movies Released Per Year:")
+print(movies_per_year)
 
-- **Python 3.x**  
-- **Pandas** – Data manipulation and analysis  
-- **VS Code** – IDE  
-- **Git & GitHub** – Version control and hosting  
+# 8️⃣ Save results to CSV
+genre_avg.to_csv("genre_wise_average_rating.csv")
+top_movies.to_csv("top_rated_movies.csv", index=False)
 
----
-
-## 🔹 Dataset
-
-The dataset `movies.csv` includes:
-
-| Column    | Description                     |
-|----------|---------------------------------|
-| movie_id | Unique ID for each movie        |
-| title    | Movie title                     |
-| genre    | Movie genre                     |
-| rating   | Movie rating (IMDb-like, float) |
-| year     | Release year                    |
-
-**Sample Data:**
-
-| movie_id | title             | genre     | rating | year |
-|----------|-----------------|----------|--------|------|
-| 1        | Inception        | Sci-Fi   | 8.8    | 2010 |
-| 2        | Interstellar     | Sci-Fi   | 8.6    | 2014 |
-| 3        | The Dark Knight  | Action   | 9.0    | 2008 |
-| 4        | Parasite         | Thriller | 8.6    | 2019 |
-| 5        | Avengers: Endgame| Action   | 8.4    | 2019 |
-
----
-
-## 📊 Features
-
-1. **Dataset Inspection** – View dataset info and first 5 rows  
-2. **Handle Missing Values** – Drop rows with null values  
-3. **Overall Average Rating** – Calculates mean rating for all movies  
-4. **Top 5 Highest-Rated Movies** – Sorts movies by rating  
-5. **Genre-Wise Average Rating** – Calculates average rating per genre  
-6. **Movies Released Per Year** – Counts movies released each year  
-7. **Save Results** – Outputs CSV files: `top_rated_movies.csv` and `genre_wise_average_rating.csv`
-
----
-
-## 🚀 How to Run
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/movie-ratings-analysis.git
-
-# Go to project folder
-cd movie-ratings-analysis
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the analysis
-python analysis.py
-
-
-Output files:
-
-top_rated_movies.csv
-
-genre_wise_average_rating.csv
-
-🧠 Insights
-
-Sci-Fi movies have the highest average rating
-
-Top-rated movie: The Dark Knight (9.0)
-
-Movie releases peaked after 2010
-
-⭐ License
-
-This project is open source and free to use for learning purposes.
-
-📌 Author
-
-Kavya – B.Sc Data Analytics student building practical Python projects.
-
-
----
+print("\n✅ Analysis Completed. Results saved successfully!")
 
 
