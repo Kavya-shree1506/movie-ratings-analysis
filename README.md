@@ -39,6 +39,13 @@ A sample dataset containing 10 movies with the following attributes:
 - `movie_ratings_analysis.py` – Python source code.
 - `movie_ratings_analysis.ipynb` – Google Colab notebook.
 - `movie_ratings.csv` – Dataset.
+## Visualisation Results
+
+### 1. Average Rating by Genre
+![Genre Ratings](genre_ratings.png)
+
+### 2. Top 5 Highest Rated Movies
+![Top 5 Movies](top_5_movies.png)
 
 ## Conclusion
 The analysis demonstrates how Python can be used to explore movie rating data, identify patterns, and communicate findings through visualisations.
