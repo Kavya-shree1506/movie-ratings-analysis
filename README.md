@@ -1,98 +1,46 @@
-🎬 Movie Ratings Analysis
+# Movie Ratings Analysis 📊
 
-A beginner-to-intermediate Python data analysis project using Pandas to analyze movie ratings from a CSV dataset.
+## Project Overview
+This project explores movie ratings using Python and data analysis techniques. It examines movie genres, ratings, and audience votes to identify rating patterns and top-rated movies.
 
-This project demonstrates a complete data analysis workflow including data loading, cleaning, aggregation, and exporting results — built using VS Code and hosted on GitHub.
+## Objectives
+- Analyse movie rating distributions.
+- Calculate average ratings.
+- Identify the highest-rated movies.
+- Compare average ratings across genres.
+- Visualise insights using charts.
 
-📂 Project Structure
-movie-ratings-analysis/
-├── data/
-│   └── movies.csv
-├── analysis.py
-├── genre_wise_average_rating.csv
-├── top_rated_movies.csv
-├── requirements.txt
-└── README.md
+## Tools & Technologies
+- Python
+- Pandas
+- Matplotlib
+- Google Colab
+- GitHub
 
-🛠 Tools & Libraries
+## Dataset
+A sample dataset containing 10 movies with the following attributes:
+- Movie Title
+- Genre
+- Release Year
+- Rating
+- Votes
 
-Python 3.x
+## Key Analysis
+- Overall average movie rating.
+- Highest-rated movie identification.
+- Top 5 highest-rated movies.
+- Genre-wise average rating comparison.
 
-Pandas
+## Visualisations
+1. Average Rating by Genre – Bar Chart
+2. Top 5 Highest Rated Movies – Bar Chart
 
-VS Code
+## Project Files
+- `movie_ratings_analysis.py` – Python source code.
+- `movie_ratings_analysis.ipynb` – Google Colab notebook.
+- `movie_ratings.csv` – Dataset.
 
-Git & GitHub
+## Conclusion
+The analysis demonstrates how Python can be used to explore movie rating data, identify patterns, and communicate findings through visualisations.
 
-📊 Dataset Details
 
-The dataset movies.csv contains the following columns:
-
-Column	Description
-movie_id	Unique ID for each movie
-title	Movie title
-genre	Movie genre
-rating	Movie rating (float)
-year	Release year
-✨ What This Project Does
-
-Based on the code in analysis.py, this project performs:
-
-Loads the dataset using Pandas
-
-Displays dataset info & first 5 rows
-
-Handles missing values by removing null rows
-
-Calculates overall average movie rating
-
-Finds top 5 highest-rated movies
-
-Computes genre-wise average ratings
-
-Counts movies released per year
-
-Exports results to CSV files
-
-🚀 How to Run the Project
-# Clone the repository
-git clone https://github.com/Kavya-shree1506/movie-ratings-analysis.git
-
-# Navigate to project folder
-cd movie-ratings-analysis
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the analysis
-python analysis.py
-
-📁 Output Files Generated
-
-After running the script, the following files are created:
-
-top_rated_movies.csv → Top 5 highest-rated movies
-
-genre_wise_average_rating.csv → Average rating per genre
-
-🧠 Sample Insights
-
-Overall average movie rating is calculated
-
-Top-rated movies are identified
-
-Genre-wise rating trends are analyzed
-
-Movie release patterns by year are observed
-
-📌 Author
-
-Kavya Shree R.S
-B.Sc Data Analytics student
-Building hands-on Python & data analytics projects 🚀
-
-✅ GitHub Ready Checklist
-
-✔ README matches the code
-✔ Clean project structure
-✔ Beginner-friendly & recruiter-friendly
