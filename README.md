@@ -76,6 +76,8 @@ A sample dataset containing 10 movies with the following attributes:
 [![Top 5 Movies](top_5_movies.png.png)](top_5_movies.png.png)
 
 ## Conclusion
-The analysis demonstrates how Python can be used to explore movie rating data, identify patterns, and communicate findings through visualisations.
 
+This project demonstrates the use of Python for exploratory data analysis and visualization of movie ratings. Through Pandas and Matplotlib, the analysis identifies highly rated movies and compares average ratings across genres.
+
+The project strengthened practical skills in data cleaning, data analysis, and visual storytelling.
 
