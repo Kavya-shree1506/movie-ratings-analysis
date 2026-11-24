@@ -41,6 +41,25 @@ A sample dataset containing 10 movies with the following attributes:
 
 ![Top 5 Highest Rated Movies](top_5_movies.png.png)
 
+## Key Insights
+
+- Identified differences in average ratings across movie genres.
+- Highlighted the top 5 highest-rated movies in the dataset.
+- Used Python visualizations to communicate rating patterns.
+- Applied Pandas for data analysis and Matplotlib for visualization.
+
+## Limitations
+
+- The current dataset contains only 10 movies.
+- The findings are based on a small sample and may not represent overall movie-rating trends.
+- A larger dataset would help produce more reliable insights.
+
+## Future Improvements
+
+- Expand the dataset with more movies.
+- Explore rating distributions and genre comparisons.
+- Build an interactive Power BI dashboard.
+
 ## Project Files
 - `movie_ratings_analysis.py` – Python source code.
 - `movie_ratings_analysis.ipynb` – Google Colab notebook.
