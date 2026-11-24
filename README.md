@@ -31,9 +31,15 @@ A sample dataset containing 10 movies with the following attributes:
 - Top 5 highest-rated movies.
 - Genre-wise average rating comparison.
 
-## Visualisations
-1. Average Rating by Genre – Bar Chart
-2. Top 5 Highest Rated Movies – Bar Chart
+## Visualisation Results
+
+### 1. Average Rating by Genre
+
+![Average Rating by Genre](genre_ratings.png.png)
+
+### 2. Top 5 Highest Rated Movies
+
+![Top 5 Highest Rated Movies](top_5_movies.png.png)
 
 ## Project Files
 - `movie_ratings_analysis.py` – Python source code.
